@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Profissional - Projeto Grupo</title>
+    
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #3a1469; /* Fundo roxo escuro */
+            color: #480785;
+            line-height: 1.6;
+        }
+
+        /* --- MENU SUPERIOR --- */
+        .menu {
+            background: linear-gradient(90deg, #470288 0%, #2e0854 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: sticky; /* Faz o menu fixar no topo ao rolar */
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Botão Voltar Estilizado */
+        .btn-voltar {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid #9575cd;
+            transition: 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #2575fc;
+            border-color: white;
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Card Branco de Fundo */
+        .card-roadmap {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border-left: 8px solid #4b0082;
+        }
+
+        .titulo-secao {
+            font-size: 28px;
+            color: #4b0082;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* --- ESTRUTURA VISUAL DO ROADMAP --- */
+        .roadmap-trilha {
+            position: relative;
+            padding-left: 40px;
+            margin-top: 30px;
+        }
+
+        /* Linha Vertical que conecta os pontos */
+        .roadmap-trilha::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #2575fc, #6a11cb, #3a1469);
+            border-radius: 4px;
+        }
+
+        .passo {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        /* Círculos indicadores (Check ou Vazio) */
+        .passo::before {
+            content: '✓'; /* Ícone para passos concluídos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -41px;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            background-color: #2575fc;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            z-index: 1;
+            border: 3px solid white;
+        }
+
+        /* Estilo para passos que ainda não foram feitos */
+        .passo.bloqueado::before {
+            content: '';
+            background-color: white;
+            border: 3px solid #6a11cb;
+        }
+
+        /* Caixa de conteúdo de cada curso/etapa */
+        .box-conteudo {
+            background: #f4f1fa;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #d1c4e9;
+            transition: 0.3s ease;
+        }
+
+        .box-conteudo:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .box-conteudo h4 {
+            color: #470288;
+            margin-bottom: 10px;
+        }
+
+        /* Estilização das imagens dos cursos */
+        .img-roadmap {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #d1c4e9;
+            font-size: 13px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .card-roadmap { padding: 20px; }
+            .menu { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="menu">
+        <a href="index2.html" class="btn-voltar">← Voltar para o Início</a>
+        <h2>Roadmap de Carreira</h2>
+        <div style="width: 100px;"></div> </header>
+
+    <main>
+        <section class="card-roadmap">
+            <h2 class="titulo-secao">Minha Jornada de Aprendizado</h2>
+            <p style="text-align: center; color: #666;">Acompanhe o progresso dos meus estudos em tecnologia.</p>
+
+            <div class="roadmap-trilha">
+                
+                <div class="passo">
+                    <div class="box-conteudo">
+                        <h4>1. Lógica de Programação ✅</h4>
+                        <p>Base fundamental de algoritmos, variáveis e estruturas de repetição.</p>
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=600" class="img-roadmap" alt="Lógica de Programação">
+                    </div>
+                </div>
+
+                <div class="passo">
+                    <div class="box-conteudo">
+                        <h4>2. Analista de Redes ✅</h4>
+                        <p>Protocolos TCP/IP, roteamento, switches e infraestrutura de servidores.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010bdcc91e?q=80&w=600" class="img-roadmap" alt="Infraestrutura de Redes">
+                    </div>
+                </div>
+
+                <div class="passo bloqueado">
+                    <div class="box-conteudo">
+                        <h4>3. Python Avançado 🚧</h4>
+                        <p>Desenvolvimento Backend, automação e manipulação de grandes volumes de dados.</p>
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600" class="img-roadmap" alt="Python Backend">
+                    </div>
+                </div>
+
+                <div class="passo bloqueado">
+                    <div class="box-conteudo">
+                        <h4>4. Segurança da Informação & Cloud</h4>
+                        <p>Pentest, defesa cibernética e deploy escalável em nuvem.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600" class="img-roadmap" alt="Cibersegurança">
+                    </div>
+                </div>
+
+            </div> </section>
+    </main>
+
+    <footer>
+        <p>Projeto Grupo de TI - Desenvolvido com foco em crescimento profissional &copy; 2024</p>
+    </footer>
+
+</body>
+</html>

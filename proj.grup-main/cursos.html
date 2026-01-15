@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Projeto Grupo</title>
+    
+    <style>
+        /* MANTENDO SEU CSS ORIGINAL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #3a1469; 
+            color: #480785;
+            display: block;
+        }
+
+        .menu {
+            background: linear-gradient(90deg, #470288 0%, #2e0854 100%);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .perfil_topo {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(75, 0, 130, 0.1);
+            border-left: 6px solid #4b0082;
+        }
+
+        .info_principal {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .area_tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .status_tag {
+            background: #e7e5e9;
+            color: #5e35b1;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            border: 1px solid #d1c4e9;
+            display: flex;
+            flex-direction: column; 
+            gap: 5px;
+            width: 250px; /* Definido para comportar a imagem */
+        }
+
+        /* ACRÉSCIMO PARA A IMAGEM FICAR BONITA */
+        .img-curso {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        .status_tag a {
+            color: #2575fc;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: normal;
+            word-break: break-all;
+        }
+
+        .status_tag a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6a11cb;
+            font-size: 14px;
+            font-weight: 500;
+        }
+         /* Botão Voltar Estilizado */
+        .btn-voltar {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid #9575cd;
+            transition: 0.3s;
+        }
+
+        .btn-voltar:hover {
+            background-color: #2575fc;
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="menu">
+        <a href="index2.html" class="btn-voltar">← Voltar para o Início</a>
+        <h2>Cursos</h2>
+        <div style="width: 100px;"></div> 
+    </header>
+
+    <main>
+        <section class="perfil_topo">
+            <div class="info_principal">
+                <h2 style="color: #4b0082; margin-bottom: 10px;">
+                    <p>Nossos cursos são disponibilizados através de parceria visando seu crescimento no mundo profissional com certificação garantida!</p> 
+                </h2>
+                
+                <h5> Cursos Disponíveis:</h5>
+                
+                <div class="area_tags">
+                    <div class="status_tag">
+                        
+                        <img src="img1.png"img-curso">
+                        Analista de redes 
+                        <a href="https://senaigoias.com.br/eadcursos/senai/curso/17319/analista-de-redes-em-computadores" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                        
+                        <img src="img2.png" class="img-curso">
+                        Segurança da Informação
+                        <a href="https://www.google.com/..." target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                        
+                        <img src="img3.png" class="img-curso">
+                        Python Avançado
+                        <a href="https://www.learncafe.com/cursos/curso-de-python-avancado-2" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                       
+                        <img src="img4.png" class="img-curso">
+                        Cloud Computing
+                        <a href="https://www.alura.com.br/formacao-cloud-computing" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                        
+                        <img src="img5.png" class="img-curso">
+                        Linux Terminal
+                        <a href="https://www.udemy.com/course/curso-linux-comandos-terminal/" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                        
+                        <img src="img6.png" class="img-curso">
+                        Hardware e Infra
+                        <a href="https://www.coursera.org/learn/administracao-de-sistemas-servicos-infraestrutura-ti" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+
+                    <div class="status_tag">
+                        
+                        <img src="img7.png" class="img-curso">
+                        Devops
+                        <a href="https://www.alura.com.br/formacao-devops" target="_blank">Clique aqui para ver o curso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Projeto Grupo TI</p>
+    </footer>
+
+</body>
+</html>

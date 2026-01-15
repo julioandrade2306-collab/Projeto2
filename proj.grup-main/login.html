@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Projeto Grupo</title>
+    <style>
+        /* CSS INTEGRADO - ADAPTADO PARA TONS ROXOS E AZUIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            /* Fundo com gradiente Roxo e Azul Escuro */
+            background: linear-gradient(135deg, #4b0082 0%, #00008b 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+        }
+
+        .login-container {
+            background: rgba(37, 5, 110, 0.774);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            width: 100%;
+            max-width: 400px;
+            color: #8a8a8a;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 10px;
+            color: #0882a0; /* Título em Roxo */
+        }
+
+        .login-container p {
+            font-size: 14px;
+            color: #8b8989;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c89b4; /* Labels em Roxo */
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #0000ff; /* Foco em Azul */
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            /* Botão com gradiente Roxo para Azul */
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+        }
+
+        .footer-link {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .footer-link a {
+            color: #2575fc; /* Link em Azul */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Bem-vindo</h2>
+        <p>Acesse sua conta para ver seu perfil</p>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <div class="footer-link">
+            Não tem uma conta? <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const emailValue = document.getElementById('email').value;
+            const passwordValue = document.getElementById('password').value;
+
+            if(emailValue && passwordValue) {
+                localStorage.setItem('usuarioLogado', emailValue);
+                
+                alert('Login realizado com sucesso!');
+                window.location.href = "index2.html"; 
+            }
+        });
+    </script>
+</body>
+</html>
